@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Laboratorio 07</title>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="formulario">
+            <h1>Your songs!</h1>
+            <form method="post" action="/addsong">
+                <label for="name">Name's song</label>
+                <input type="text" id="name" name="name">
+
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="reggaeton">Reggaeton</option>
+                    <option value="folk">Folk</option>
+                    <option value="bachata">Bachata</option>
+                </select>
+        
+                <label for="singer">Singer:</label>
+                <input type="text" id="singer" name="singer">
+
+                <label for="album">Album:</label>
+                <input type="text" id="album" name="album">
+        
+                <input onclick="enviarFormulario()" type="submit" value="Enviar"><br>
+                
+                <a href="/songs">Get songs</a>
+                
+                
+            </form>
+            <div id="mi-div" class="oculto div-flotante">
+                <p>Song registered successfully!</p>
+            </div>
+            
+            <!--
+            
+            -->
+            
+        </div>
+        
+    </body>
+    <script src="/js/main.js"></script>
+</html>

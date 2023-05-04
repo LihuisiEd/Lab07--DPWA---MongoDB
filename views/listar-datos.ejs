@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>listar-datos.ejs</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles2.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="title">
+      <h1>Songs</h1>
+    </div>
+    
+    
+      <% if (songs.length > 0) { %>
+        <% songs.forEach(song => { %>
+          <div class="lista">
+            <h2><%= song.name %></h2>
+            <ul>
+              
+                <li>Singer: <%= song.singer %></li>
+                <li>Category: <%= song.category %></li>
+                <li>Album: <%= song.album %></li>
+              
+            </ul>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <div class="lista">
+          <p>No hay song.</p>
+        </div>    
+      <% } %>
+    
+    
+
+  </body>
+</html>
